@@ -8,8 +8,4 @@ public class One2ReverseStr {
         }
         return new String(chars);
     }
-
-    public static void main(String[] args) {
-        System.out.println(reverseStr("12345678"));
-    }
 }

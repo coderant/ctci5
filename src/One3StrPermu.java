@@ -30,10 +30,4 @@ public class One3StrPermu {
             return true;
         }
     }
-
-    public static void main(String[] args) {
-        String str1 = "0123456789";
-        String str2 = "0123456789";
-        System.out.println(detectPermuSweep(str1,str2));
-    }
 }

@@ -28,7 +28,8 @@ public class One4SpaceSwap {
         if (spaceCount == 0) {
             return chars;
         } else if (spaceCount * 2 + lastCharIndex > chars.length - 1) {
-            throw new IllegalArgumentException("Chars length is too short");
+            System.out.print("Chars length is too short");
+            return chars;
         }
 
         //add %20
@@ -44,10 +45,4 @@ public class One4SpaceSwap {
         }
         return chars;
     }
-
-    public static void main(String[] args) {
-        String str = "   1   3as d f  ˙˙©˙ßå ßß                         ";
-        System.out.println(spaceSwap(str.toCharArray()));
-    }
-
 }

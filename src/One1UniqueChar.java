@@ -5,13 +5,13 @@ public class One1UniqueChar {
         boolean[] existed = new boolean['\uFFFF'];
         for (char c : str.toCharArray()) {
             if (existed[c]) {
-                System.out.println(str + " is not unique");
+                System.out.println("\"" + str + "\"" + " is not unique");
                 return;
             } else {
                 existed[c] = true;
             }
         }
-        System.out.println(str + " is Unique String!!");
+        System.out.println("\"" + str + "\"" + " is Unique String!!");
     }
 
     public static void noAddiSpace(String str) {
@@ -20,19 +20,10 @@ public class One1UniqueChar {
 
         for (int i = 1; i < chars.length; i++) {
             if (chars[i] == chars[i - 1]) {
-                System.out.println(str + " is not unique");
+                System.out.println("\"" + str + "\"" + " is not unique");
                 return;
             }
         }
-        System.out.println(str + " is Unique String!!");
-    }
-
-    public static void main(String[] args) {
-        additionalSpace("Unique wr˜˚∆¨ˆ\"09876œ∑ßåΩ");
-        additionalSpace("NotUni que˜");
-
-        noAddiSpace("Unique wr˜˚∆¨ˆ\"09876œ∑ßåΩ");
-        noAddiSpace("NotUnique˜˜");
-        noAddiSpace(" ");
+        System.out.println("\"" + str + "\"" + " is Unique String!!");
     }
 }

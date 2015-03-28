@@ -31,8 +31,4 @@ import java.lang.String;import java.lang.StringBuilder;import java.lang.System;p
         }
 
     }
-
-    public static void main(String[] args) {
-        System.out.println(strZip("                  asaaaaaaaaaaaaaaaaaaaaaaaaabbbbbbbbbbbbbbbbbbbb"));
-    }
 }
