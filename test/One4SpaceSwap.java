@@ -1,4 +1,4 @@
-import java.lang.IllegalArgumentException;import java.lang.String;import java.lang.System;public class One4SpaceSwap {
+public class One4SpaceSwap {
     public static char[] spaceSwap(char[] chars) {
         //scan for tailing stub whitespaces
         int stubCount = 0;

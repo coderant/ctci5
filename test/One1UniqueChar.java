@@ -1,4 +1,4 @@
-import java.lang.String;import java.lang.System;import java.util.Arrays;
+import java.util.Arrays;
 
 public class One1UniqueChar {
     public static void additionalSpace(String str) {

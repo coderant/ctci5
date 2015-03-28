@@ -1,4 +1,4 @@
-import java.lang.String;import java.lang.System;import java.util.Arrays;
+import java.util.Arrays;
 
 public class One3StrPermu {
     public static boolean detectPermuSort(String str1, String str2) {
