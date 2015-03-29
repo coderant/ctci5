@@ -1,4 +1,5 @@
 public class One6RotateImg {
+    // change byte[][] to byte[][][4] will be the original question
     public static void inPlaceRotate(byte[][] matrix) {
         if (matrix[0].length != matrix.length) {
             throw new IllegalArgumentException("Not a Square matrix");
@@ -20,10 +21,8 @@ public class One6RotateImg {
         int n = matrix.length - 1;
         byte foo = matrix[y1][n - x1];
         matrix[y1][n - x1] = matrix[x1][y1];
-        byte bar = matrix[n - x1][n - y1];
+        matrix[x1][y1] = matrix[n - y1][x1];
+        matrix[n - y1][x1] = matrix[n - x1][n - y1];
         matrix[n - x1][n - y1] = foo;
-        foo = matrix[n - y1][x1];
-        matrix[n - y1][x1] = bar;
-        matrix[x1][y1] = foo;
     }
 }
