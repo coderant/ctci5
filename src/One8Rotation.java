@@ -7,9 +7,9 @@ public class One8Rotation {
             char[] targetChar = target.toCharArray();
 
             OUTER:
-            for (int i = 0; i < targetChar.length; i++) {
+            for (int i = 0; i <= targetChar.length - subChar.length; i++) {
                 for (int shift = 0; shift < subChar.length; shift++) {
-                    if (targetChar[i+shift] != subChar[shift]) {
+                    if (targetChar[i + shift] != subChar[shift]) {
                         continue OUTER;
                     }
                 }
@@ -21,7 +21,7 @@ public class One8Rotation {
         }
     }
 
-    public static void main(String[] args) {
-        System.out.println(isSubString("1123c", "1123121312312311231231213123"));
+    public static boolean isRotate(String str1, String str2) {
+        return str1.length() == str2.length() && isSubString(str1, str2 + str2);
     }
 }
