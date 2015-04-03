@@ -3,7 +3,7 @@ package helper;
 public class LinkedList<E> {
     //a doubly linked list with sentinel
 
-    public LinkedListNode<E> sentinel;
+    public final LinkedListNode<E> sentinel;
     public int size = 0;
 
     public LinkedList() {
@@ -17,6 +17,14 @@ public class LinkedList<E> {
         for (E e : items) {
             size++;
             add(e);
+        }
+    }
+
+    public LinkedListNode<E> getHead() {
+        if (size == 0) {
+            return null;
+        } else {
+            return sentinel.next;
         }
     }
 
