@@ -1,5 +1,6 @@
 package helper;
 
+
 public class LinkedList<E> {
     //a doubly linked list with sentinel
 
@@ -17,6 +18,14 @@ public class LinkedList<E> {
         for (E e : items) {
             size++;
             add(e);
+        }
+    }
+
+    public LinkedList(LinkedListNode<E> head) {
+        this();
+        while (head != null) {
+            add(head.item);
+            head = head.next;
         }
     }
 
@@ -44,4 +53,20 @@ public class LinkedList<E> {
         }
         return str;
     }
+
+//    public void add(LinkedList<E> list2) {
+//        if (list2.size > 0) {
+//            size += list2.size;
+//            sentinel.prev.next = list2.getHead();
+//            list2.getHead().prev = sentinel.prev;
+//            sentinel.prev = list2.sentinel.prev;
+//            list2.sentinel.next = sentinel;
+//
+//            LinkedListNode<E> node = list2.getHead();
+//            while (node.isValid()) {
+//                node.list = this;
+//                node = node.next;
+//            }
+//        }
+//    }
 }

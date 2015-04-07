@@ -4,7 +4,11 @@ public class LinkedListNode<E> {
     public E item;
     public LinkedListNode<E> prev;
     public LinkedListNode<E> next;
-    private LinkedList<E> list;
+    public LinkedList<E> list;
+
+    public LinkedListNode(E item) {
+        this.item = item;
+    }
 
     public LinkedListNode(E item, LinkedListNode<E> prev, LinkedListNode<E> next, LinkedList<E> list) {
         this.item = item;
